@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#ball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: rgb(63, 63, 133);
+    border-radius: 50px;
+    transition: all 1s;
+  }
