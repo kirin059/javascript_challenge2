@@ -30,7 +30,7 @@ body {
     border-radius: 50px;
     cursor: pointer;
     flex: 0.5;
-    -webkit-transition: all 700ms ease-in;
+    transition: all 700ms ease-in;
   }
 
   .panel h3 {
