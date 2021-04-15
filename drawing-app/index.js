@@ -8,7 +8,7 @@ const clearEl = document.getElementById('clear');
 
 const ctx = canvas.getContext('2d');
 
-let size = 10
+let size = 12
 let isPressed = false
 colorEl.value = 'black'
 let color = colorEl.value
@@ -19,6 +19,7 @@ canvas.addEventListener('mousedown', (e) => {
     isPressed = true
 
     x = e.offsetX
+    console.log(x)
     y = e.offsetY
 })
 
