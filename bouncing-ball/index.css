@@ -14,3 +14,16 @@
     border-radius: 50px;
     transition: all 1s;
   }
+
+  .box {
+      display: flex;
+      margin: 100px auto;
+      width: 100px;
+      height: 100px;
+      background-color: sandybrown;
+      transition: transform 300ms ease;
+  }
+
+  .box:hover {
+    transform: translateY(10px);
+  }
