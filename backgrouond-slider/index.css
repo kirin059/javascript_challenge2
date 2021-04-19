@@ -37,6 +37,12 @@ body::before {
   overflow: hidden;
 }
 
+#title {
+  color: #fff;
+  text-align: center;
+  z-index: 500;
+}
+
 .slide {
   position: absolute;
   top: -15vh;

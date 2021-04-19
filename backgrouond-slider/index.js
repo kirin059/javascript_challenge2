@@ -1,42 +1,66 @@
 'use strict';
 
-const body = document.body
-const slides = document.querySelectorAll('.slide')
+const body = document.body;
+const slides = document.querySelectorAll('.slide')  // arr
 const leftBtn = document.getElementById('left')
 const rightBtn = document.getElementById('right')
 
-let activeSlide = 0
+let currentSlide = 0;
 
-rightBtn.addEventListener('click', () => {
-    activeSlide++
+rightBtn.addEventListener('click', (e) => {
+    // console.log(e.currentTarget)
 
-    if (activeSlide > slides.length - 1) {
-        activeSlide = 0
+    currentSlide++;
+
+    if (currentSlide > slides.length - 1) {
+        currentSlide = 0
     }
 
-    setBgToBody()
-    setActiveSlide()
+    bodyBackground()
+    activeSlide()
 })
 
-leftBtn.addEventListener('click', () => {
-    activeSlide--
+leftBtn.addEventListener('click', e => {
+    console.log(e.currentTarget)
 
-    if (activeSlide < 0) {
-        activeSlide = slides.length - 1
+    currentSlide--;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
     }
 
-    setBgToBody()
-    setActiveSlide()
+    bodyBackground()
+    activeSlide()
 })
 
-setBgToBody()
+bodyBackground()
 
-function setBgToBody() {
-    body.style.backgroundImage = slides[activeSlide].style.backgroundImage
+function bodyBackground() {
+    body.style.backgroundImage = slides[currentSlide].style.backgroundImage;
 }
 
-function setActiveSlide() {
-    slides.forEach((slide) => slide.classList.remove('active'))
-
-    slides[activeSlide].classList.add('active')
+function activeSlide() {
+    slides.forEach(slide => slide.classList.remove('active'))
+    slides[currentSlide].classList.add('active')
 }
+
+
+
+// auto-text
+const textEl = document.getElementById('title');
+const text = 'Image Slide Effect';
+
+let idx = 1;
+
+function autoText() {
+    textEl.innerHTML = text.slice(0, idx);
+    idx++;
+
+    if (idx > text.length) {
+        idx = 1;
+    }
+
+    setTimeout(autoText, 200)  // speed는 300의 속도이다
+}
+
+autoText()
