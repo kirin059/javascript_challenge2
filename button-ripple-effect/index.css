@@ -5,47 +5,46 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-    background-color: #000;
-    font-family: 'Roboto', sans-serif;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+}
 
-  button {
-    position: relative;
-    padding: 20px 30px;
-    margin: 10px 0;
-    background-color: purple;
-    color: #fff;
-    border: 1px purple solid;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    overflow: hidden;
-  }
+button {
+  position: relative;
+  padding: 30px 40px;
+  background-color: rgb(20, 9, 71);
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+  text-transform: uppercase; /* 글자 형태 바꾸기(전부 대문자) */
+  overflow: hidden;
+}
 
-  button:focus {
-    outline: none;
-  }
+button:focus {
+  outline: none;
+}
 
-  button .circle {
-    position: absolute;
-    background-color: #fff;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    animation: scale 0.5s ease-out;
+/* js 기능 추가 부분 */
+button .circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: bigger 0.5s ease-out;
+}
+
+@keyframes bigger {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
   }
-  
-  @keyframes scale {
-    to {
-      transform: translate(-50%, -50%) scale(3);
-      opacity: 0;
-    }
-  }
+}
