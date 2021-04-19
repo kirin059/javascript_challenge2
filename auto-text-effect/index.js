@@ -8,7 +8,7 @@ console.log(speedEl)
 const text = 'I believe Everything goes well';
 
 let idx = 1;
-let speed = 300 / speedEl.value;
+let speed = 400 / speedEl.value;
 console.log(speed)
 
 // text를 slice해서 보여주는 기능 함수
@@ -25,5 +25,5 @@ function writeText() {
 writeText()
 
 speedEl.addEventListener('input', () => {
-    speed = 300 / speedEl.value;
+    speed = 400 / speedEl.value;
 })
