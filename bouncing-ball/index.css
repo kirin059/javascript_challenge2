@@ -10,12 +10,13 @@
     left: 0;
     width: 50px;
     height: 50px;
-    background: rgb(63, 63, 133);
+    background: rgb(37, 206, 93);
+    border: 5px solid rgb(181, 228, 10);
     border-radius: 50px;
-    transition: all 1s;
+    transition: all 1s ease-in;
   }
 
-  .box {
+  /* .box {
       display: flex;
       margin: 100px auto;
       width: 100px;
@@ -26,4 +27,4 @@
 
   .box:hover {
     transform: translateY(10px);
-  }
+  } */
