@@ -1,28 +1,29 @@
-const buttons = document.querySelectorAll('.ripple')
+'use strict';
 
-buttons.forEach(button => {
-    button.addEventListener('click', function (e) {
+const btns = document.querySelectorAll('.ripple')
+// 버튼을 찍을 때 효과를 보여주는 기능이기 때문에, 복수로 받아온다(버튼을 찍을때마다 효과 구현)
+
+btns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
         console.log(e.target)
 
-        const x = e.clientX
-        console.log(x)  // 현재 찍은 마우스 x값(상대값)
-        const y = e.clientY
-        console.log(y)  // 현재 찍은 마우스 y값(상대값)
+        const x = e.clientX;
+        const y = e.clientY;
+        //console.log(x)
 
-        const buttonTop = e.target.offsetTop
-        console.log(buttonTop)  // 228(고정값)
-        const buttonLeft = e.target.offsetLeft
-        console.log(buttonLeft) // 199(고정값)
+        const buttonTop = e.target.offsetTop;
+        const buttonLeft = e.target.offsetLeft;
+        // console.log(buttonLeft) 
 
-        const xInside = x - buttonLeft
-        const yInside = y - buttonTop
+        const xClickPoint = x - buttonLeft;  // 버튼 안에서 x좌표
+        const yClickPoint = y - buttonTop; // 버튼 안에서 y좌표
 
-        const circle = document.createElement('span')
-        circle.classList.add('circle')
-        circle.style.top = yInside + 'px'
-        circle.style.left = xInside + 'px'
+        const circle = document.createElement('span');
+        circle.classList.add('circle');
+        circle.style.top = yClickPoint + 'px'
+        circle.style.left = xClickPoint + 'px'
 
-        this.appendChild(circle)
+        btn.appendChild(circle)
 
         setTimeout(() => circle.remove(), 500)
     })
