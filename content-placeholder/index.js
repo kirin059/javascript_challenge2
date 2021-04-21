@@ -20,7 +20,7 @@ function getData() {
         'I love create things around me. I hope to get an chance to work as a developer'
     profile_img.innerHTML =
         '<img src="./profile.png" alt="profile image" />'
-    name.innerHTML = 'Saebom Lee'
+    name.innerHTML = 'Bread Lee'
     date.innerHTML = 'April 11, 2021'
 
     animated_bgs.forEach((bg) => bg.classList.remove('animated-bg'))
