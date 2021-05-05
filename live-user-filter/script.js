@@ -1,6 +1,6 @@
-const result = document.getElementById('result')
-const filter = document.getElementById('filter')
-const listItems = []
+const result = document.getElementById('result')  // ul
+const filter = document.getElementById('filter')  // input
+const listItems = []  // 새로 받아온 user list 담을 빈배열
 
 getData()
 
@@ -15,9 +15,9 @@ async function getData() {
     result.innerHTML = ''
 
     results.forEach(user => {
-        const li = document.createElement('li')
+        const li = document.createElement('li')  // list 생성
 
-        listItems.push(li)
+        listItems.push(li)  // 빈배열에 list 추가하기
 
         li.innerHTML = `
             <img src="${user.picture.large}" alt="${user.name.first}">
@@ -31,6 +31,7 @@ async function getData() {
     })
 }
 
+// input data를 filtering
 function filterData(searchTerm) {
     listItems.forEach(item => {
         if(item.innerText.toLowerCase().includes(searchTerm.toLowerCase())) {
