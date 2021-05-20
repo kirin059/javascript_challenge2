@@ -41,13 +41,16 @@ header {
     background-color: var(--primary-color);
   }
   
-  /* js */
   main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
   
+
+
+
+  /* js */
   .movie {
     position: relative;
     width: 300px;
