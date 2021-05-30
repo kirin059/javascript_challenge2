@@ -1,6 +1,6 @@
 'use strict';
 
-const fill = document.querySelector('.fill')
+const fill = document.querySelector('.fill')  // image
 const empties = document.querySelectorAll('.empty')  //arr
 
 fill.addEventListener('dragstart', dragStart)
