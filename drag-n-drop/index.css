@@ -14,8 +14,8 @@
 
   /* 이미지가 빈 객체 */
   .empty {
-    height: 150px;
-    width: 150px;
+    height: 180px;
+    width: 180px;
     margin: 10px;
     border: solid 3px black;
     background: white;
@@ -23,8 +23,8 @@
 
   /* 이미지로 채워지는 객체 */
   .fill {
-    height: 145px;
-    width: 145px;
+    height: 180px;
+    width: 180px;
     background-image: url('https://source.unsplash.com/random/150x150');
     cursor: pointer;
   }
